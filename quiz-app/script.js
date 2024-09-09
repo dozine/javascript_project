@@ -1,20 +1,20 @@
 const questions = [
   {
-    question: "which is largest animal in the world?",
+    question: "한입 베어 문 사과는?",
     answers: [
-      { text: "Shark", correct: false },
-      { text: "Blue Whale", correct: true },
-      { text: "Elephant", correct: false },
-      { text: "Giraffe", correct: false },
+      { text: "사과", correct: false },
+      { text: "파인애플", correct: true },
+      { text: "오렌지", correct: false },
+      { text: "복숭아", correct: false },
     ],
   },
   {
-    question: "내 이름이 뭐게 ",
+    question: "프론트엔드에서 가장 점유율이 높은 라이브러리는? ",
     answers: [
-      { text: "장", correct: false },
-      { text: "도", correct: false },
-      { text: "진", correct: false },
-      { text: "장도진", correct: true },
+      { text: "Vue.js", correct: false },
+      { text: "Svelte", correct: false },
+      { text: "typescript", correct: false },
+      { text: "React.js", correct: true },
     ],
   },
   {
