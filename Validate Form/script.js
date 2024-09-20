@@ -10,7 +10,7 @@ function validateName() {
     nameError.innerHTML = "Name is required";
     return false;
   }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*&/)) {
+  if (!name.match(/^[A-Za-z]+\s[A-Za-z]+$/)) {
     nameError.innerHTML = "Write full name";
     return false;
   }
@@ -42,7 +42,7 @@ function validateEmail() {
     emailError.innerHTML = "Email is required";
     return false;
   }
-  if (!email.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+  if (!email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
     emailError.innerHTML = "Email Invalid";
     return false;
   }
@@ -58,12 +58,17 @@ function validateMessage() {
     messageError.innerHTML = left + "more characters required";
     return false;
   }
-  message.innerHTML = "<i class='fas fa-check-circle'></i>";
+  messageError.innerHTML = "<i class='fas fa-check-circle'></i>";
   return true;
 }
 
 function validateForm() {
-  if (!validateName() || !validatePhone() || !validateMessage()) {
+  if (
+    !validateName() ||
+    !validatePhone() ||
+    !validateMessage() ||
+    !validateEmail()
+  ) {
     submitError.style.display = "block";
     submitError.innerHTML = "Please fix error to submit";
     setTimeout(function () {
